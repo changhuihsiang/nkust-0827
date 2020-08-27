@@ -1,11 +1,18 @@
-<h2>利息試算程式</h2>
+<h2 align="center">利息試算程式</h2>
 <hr>
-<?php
-	$money = 5000000;
-	$rate = 0.012;
-	$years = 15;
+<form method="post" action="test05.php" align="center">
+本金：<input type="text" size=10 name="money" value="100000">元<br>
+利率：<input type="text" size=10 name="rate" value =1.5>%<br>
+期數：<input type="text" size=10 name="years" value = 20>年<br>
+<input type="submit" value = "計算">
 
-	echo "<table border=0 width=300>";
+<?php
+    
+	$money = $_POST["money"];
+	$rate = $_POST["rate"]/100;
+	$years = $_POST["years"];
+     
+	echo "<table border=0 width=300 align=center>";
 	
 	echo "<tr>";
 	echo "<td width=120 bgcolor=#ccffcc>本金</td><td bgcolor=#ccaaaa>" . $money . "元</td>";
